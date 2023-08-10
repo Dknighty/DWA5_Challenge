@@ -15,5 +15,7 @@ form.addEventListener("submit", (event) => {
   } 
   if (!dividend || !divider) {
     result.innerText = 'Division not performed. Both values are required in inputs. Try again.'
-  } 
+  }
+  if (typeof dividend || dividend ==='string') {
+    throw new SyntaxError('number required as dividend and divider.')}
 }); 
